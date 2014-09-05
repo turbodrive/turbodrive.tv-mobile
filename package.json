@@ -1,0 +1,31 @@
+{
+  "name": "Turbodrive-mobile",
+  "version": "0.8.0",
+  "description": "Silvère Maréchal's portfolio for smartphones",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turbodrive/turbodrive.tv-mobile.git"
+  },
+  "keywords": [
+    "Interactive Show Reel",
+    "Personal website",
+    "Motion design"
+  ],
+  "author": "Silvère Maréchal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turbodrive/turbodrive.tv-mobile/issues"
+  },
+  "homepage": "https://github.com/turbodrive/turbodrive.tv-mobile",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-duplicate": "^0.1.2",
+    "grunt-uncss": "^0.3.6"
+  }
+}
