@@ -7,12 +7,9 @@ module.exports = function (grunt) {
         copy: {
           main: {
             files: [
-              {expand: true, cwd: 'src/',  src: ['*.html','images/**','php/**'], dest: 'build/'},
-
+              {expand: true, cwd: 'src/',  src: ['*.html','*.xml','*.ico','images/**','favicon/**','php/**'], dest: 'build/'},
               {expand: true, cwd: 'src/', src: ['css/fonts/**'], dest: 'build/'},
-              {expand: true, cwd: 'src/', src: ['js/modernizr.js'], dest: 'build/'},
-
-              
+              {expand: true, cwd: 'src/', src: ['js/modernizr.js'], dest: 'build/'},     
             ]
           }
         },
@@ -21,6 +18,11 @@ module.exports = function (grunt) {
             my_target: {
                 files: {
                     'build/js/turbodrive-mobile.js': ['src/js/turbodrive-mobile.js']
+                }
+            },
+            options: {
+                compress: {
+                    drop_console: true
                 }
             }
         },

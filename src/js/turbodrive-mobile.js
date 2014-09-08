@@ -115,6 +115,17 @@ $(document).ready(function() {
     resizeHandler()
     //$(window).scrollTop(0);
     
+    $(".buttonShare, .trackSocial").on("click", function(event){
+        var network = $(this).attr("data-network");
+        var action = $(this).attr("data-action");
+        ga('send', 'social', network, action, window.location);
+    })
+     
+    $(".trackEvent").on("click", function(event){
+        var eventValues = $(this).attr("data-event").split(",");
+        ga('send', 'event', eventValues[0], eventValues[1], eventValues[1]);
+    })
+    
     document.addEventListener("touchmove", touchMoveHandler);
     document.addEventListener("touchstart", touchstartHandler);
     document.addEventListener("touchend", touchendHandler);
@@ -401,7 +412,11 @@ var clickAnchorHandler = function(e) {
 
     if(dataId == undefined && dataSection == undefined){
         if(href == "#") return;
-        window.location.href = href;
+        if($(this).attr("target") == "_blank"){
+            window.open(href,"_blank");
+        }else {
+            window.location.href = href;
+        }       
         closeMenu();
     }else {
         

@@ -248,7 +248,7 @@ button .text-play {
     line-height: 16px
 }
 
-p.intro > a {
+p.intro > a, .skillsfield a {
     transition: 0.15s;
     color: #EFECE1;
     border-bottom: 1px solid rgba(239, 236, 225, 0.47);
@@ -258,7 +258,9 @@ p.intro > a {
 }
 
 p.intro > a:hover,
-p.intro > a:active {
+p.intro > a:active,
+.skillsfield a:hover,
+.skillsfield a:active {
     border-bottom-color: transparent;
     background-color: #d15f5f;
 }
