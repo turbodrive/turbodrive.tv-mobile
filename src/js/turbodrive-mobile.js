@@ -19,7 +19,7 @@ var contactPanelIsOpen = false;
 var flashUrl = "http://flash.turbodrive.tv/";
 var html5Url = "http://www.turbodrive.tv/";
 var mobileUrl = "http://m.turbodrive.tv/";
-var redirectEnabled = false;
+var redirectEnabled = true;
 var hWarning = 200;
 var isIOS7 = false;
 
@@ -38,13 +38,13 @@ $(document).ready(function() {
     
     if(redirectEnabled){
         if(!Modernizr.video || Modernizr.ie || Modernizr.ie2){
-            alert("redirect to flash version")
+            //alert("redirect to flash version")
             window.location.href = flashUrl;
         }else{
             if(Modernizr.mobile && screen.height < 1000 && screen.width < 1000){
-                alert("no redirect - stay on mobile version - " + screen.height + " - " + screen.width)
+                //alert("no redirect - stay on mobile version - " + screen.height + " - " + screen.width)
             }else {
-                alert("redirect to html5 video version - " + screen.height + " - " + screen.width)
+                //alert("redirect to html5 video version - " + screen.height + " - " + screen.width)
                 window.location.href = html5Url;
             }
         } 
