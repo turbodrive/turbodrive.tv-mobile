@@ -164,7 +164,7 @@ div.warning-mobile p {
 .intro-reel {
     background-color: #000000;
     width: 100%;
-    height: 110%;
+    height: 102%;
     position: absolute;
     top: 0px;
 }
@@ -1107,8 +1107,9 @@ a.email:hover {
     width: 100%;
     height: 100%;
     background-color: black;
-    position: absolute;
+    position: fixed;
     opacity: 0;
+    top: 0px;
     pointer-events: none;
 }
 
@@ -1229,7 +1230,8 @@ input.field-error,
 textarea.field-error {
     background-color: #D15F5F;
     border-color: rgba(236, 236, 225, 0.5);
-    box-shadow: 0px 0px 10px #D15F5F
+    -webkit-box-shadow: 0px 0px 10px #D15F5F;
+    box-shadow: 0px 0px 10px #D15F5F;
 }
 
 textarea {    
@@ -1243,36 +1245,43 @@ fieldset {
     margin: 0px 0px 0px 0px;
 }
 
-
-
-
 .form-feedback {
-    width: 70%;
-    padding: 5px 5px 10px 8px;
-    position: fixed;
+    width: 66%;
+    padding: 5px 2% 10px 2%;
+    position: relative;
     left: 15%;
-    top: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.20);
+    bottom: 195px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     display: none;
+    -webkit-box-shadow: 0px 0px 25px #1F171D;
+    box-shadow: 0px 0px 25px #1F171D;
+    position: fixed;
 }
 
 .form-feedback.error {
     background-color: #D15F5F;
     color: #ECECE1;
 }
+.form-feedback.error:hover,
+.form-feedback.error:active {
+    background-color: #E07C7C;
+}
 
 .form-feedback h2 {
-    padding: 5px 10px;
+    padding-left: 10px;
     color: #ECECE1;
 }
 
 .form-feedback p {
     color: #ECECE1;
-    padding-left: 25px;
     padding-top: 5px;
 }
 
 .form-feedback.success {
+    background-color: #3D2F3A;
+}
+.form-feedback.success:hover,
+.form-feedback.success:active {
     background-color: #3D2F3A;
 }
 

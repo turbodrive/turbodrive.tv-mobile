@@ -105,8 +105,10 @@ $(document).ready(function() {
     });
     
     $(".form-feedback").hide();
-    $("#success-validation").on("click", removeFeedback)
-    $("#error-validation").on("click", removeFeedback)
+    $(".form-feedback").on("click", removeFeedback)
+    $(".feedback-filter").on("click", removeFeedback)
+    /*$("#success-validation").on("click", removeFeedback)
+    $("#error-validation").on("click", removeFeedback)*/
     
     setMode(REEL_MODE);   
     
@@ -374,6 +376,7 @@ var updateContactPanel = function() {
 var currentContactSectionId = "";
 
 var openContactPanel = function (dataId){
+    removeFeedback();
     if(!contactPanelIsOpen){
         $(".contact-panel").animate({"height":viewportHeight});
     }
@@ -393,6 +396,7 @@ var openContactPanel = function (dataId){
 }
 
 var closeContactPanel = function (){
+    removeFeedback();
     $(".contact-panel").animate({"height":0});
     contactPanelIsOpen = false;
     $(".lines-button.x").removeClass("close");
@@ -451,7 +455,11 @@ var clickAnchorHandler = function(e) {
 
 var removeFeedback = function(event) {
         $(".feedback-filter").removeClass("open");
-        $(".form-feedback").hide();
+        $(".form-feedback").animate({opacity:0, bottom:295}, 300, function(){
+            /*$(".form-feedback").hide();*/
+            /*$(".form-feedback").css("opacity",0);
+            $(".form-feedback").css("bottom",100);*/
+        });
 }
 
 var removeErrorClasses = function(event) {
@@ -462,21 +470,30 @@ var removeErrorClasses = function(event) {
 var sentEmailHandler = function(response) { 
         //load json data from server and output message
     
-        $(".feedback-filter").addClass("open")
+        $(".feedback-filter").addClass("open");
     
         var output;
         if(response.type == 'error')
         {
             output = response.text;
             $("#error-content").html(output)
+            
             $(".form-feedback.error").show();
+            $(".form-feedback.error").css("opacity",0);
+            $(".form-feedback.error").css("bottom","35%");
+            $(".form-feedback.error").animate({opacity:1, bottom:"45%"},300);
+            
             $(".form-feedback.success").hide();
             
         }else{
             //output = response.text;
             //reset values in all input fields
             $(".form-feedback.error").hide();
+            
             $(".form-feedback.success").show();
+            $(".form-feedback.success").css("opacity",0);
+            $(".form-feedback.success").css("bottom","35%");
+            $(".form-feedback.success").animate({opacity:1, bottom:"45%"},300);
         }
 }
 
