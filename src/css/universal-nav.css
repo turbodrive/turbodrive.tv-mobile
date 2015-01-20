@@ -1,0 +1,142 @@
+/*! Turbodrive Universal Navigation Stylesheet
+ * Author : Silvère Maréchal
+ */
+
+@font-face {
+    font-family: 'texgyreadventor';
+    src: url('fonts/texgyreadventor-bold-webfont.eot');
+    src: url('fonts/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/texgyreadventor-bold-webfont.woff') format('woff'), url('fonts/texgyreadventor-bold-webfont.ttf') format('truetype'), url('fonts/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'texgyreadventor';
+    src: url('fonts/texgyreadventor-regular-webfont.eot');
+    src: url('fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/texgyreadventor-regular-webfont.woff') format('woff'), url('fonts/texgyreadventor-regular-webfont.ttf') format('truetype'), url('fonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'turbodrive';
+    src: url('fonts/turbodrive.eot?bch85c');
+    src: url('fonts/turbodrive.eot?#iefixbch85c') format('embedded-opentype'), url('fonts/turbodrive.woff?bch85c') format('woff'), url('fonts/turbodrive.ttf?bch85c') format('truetype'), url('fonts/turbodrive.svg?bch85c#turbodrive') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[data-icon]:before {
+    font-family: 'turbodrive';
+    content: attr(data-icon);
+    font-size: 26px;
+    speak: none;
+}
+
+html {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+html.lock-scroll {
+    overflow-y: hidden;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #2F1D33;
+    font-family: "texgyreadventor";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    background-color: #261322;
+}
+
+.nav .brand {
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.nav .brand img {
+    width: 220px;
+}
+
+.nav .brand .red-line {
+    margin-top: 5px;
+    background-color: #D15F5F;
+    width: 220px;
+    height: 3px;
+    display: block;
+}
+
+.nav .main a {
+    transition: 0.15s;
+    color: #8F7E7F;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    padding-top: 6px;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    display: inline-block;
+    border-bottom: 1px solid rgba(143, 125, 127, 0.25);
+}
+
+.nav.info .main a {
+    color: #CECEC4;
+    text-align: right;
+    margin-left: -135px;
+    padding-top: 15px;
+    height: 50px;
+}
+
+.nav .main ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    padding-left: 0px;
+}
+
+.nav .main ul li:last-child a {
+    border-bottom: none;
+}
+
+.nav > .menu {
+    border: 1px solid white;
+}
+
+.nav > .menu li {
+    list-style: none;
+}
+
+.nav > .menu li:active a,
+.nav > .menu li:hover a {
+    color: #EFECE1;
+}
+
+.nav > .menu .over-details {
+    font-size: 14px;
+    color: #8F7E7F;
+    width: 60%;
+    display: none;
+}
+
+.nav.info > .menu .over-details {
+    opacity: 1;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .nav > .menu li:hover .over-details {
+        opacity: 1;
+    }
+}
