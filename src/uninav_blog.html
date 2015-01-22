@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/#more-34 -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+																		
+		
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="http://www.turbodrive.tv/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://www.turbodrive.tv/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://www.turbodrive.tv/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://www.turbodrive.tv/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="http://www.turbodrive.tv/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://www.turbodrive.tv/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://www.turbodrive.tv/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://www.turbodrive.tv/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="http://www.turbodrive.tv/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="http://www.turbodrive.tv/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="http://www.turbodrive.tv/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="http://www.turbodrive.tv/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="http://www.turbodrive.tv/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#27162f">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		 
+		
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Workflow for CSS 3D Transforms transitions - Part 1 - Turbodrive</title>
+<meta name="description" content="Workflow for creating 3D transitions between pages using CSS 3d transforms and Adobe After Effects.">
+<link rel="canonical" href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/">
+<link rel="author" href="https://plus.google.com/+Silv%C3%A8reMar%C3%A9chal">
+<link rel="publisher" href="https://www.google.com/+Silv%C3%A8reMar%C3%A9chal">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Workflow for CSS 3D Transforms transitions - Part 1 - Turbodrive">
+<meta property="og:description" content="Workflow for creating 3D transitions between pages using CSS 3d transforms and Adobe After Effects.">
+<meta property="og:url" content="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/">
+<meta property="og:site_name" content="Turbodrive">
+<meta property="article:publisher" content="https://www.facebook.com/silvere.marechal">
+<meta property="article:author" content="https://www.facebook.com/silvere.marechal">
+<meta property="article:tag" content="Adobe After Effects">
+<meta property="article:tag" content="CSS 3D Transforms">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="Motion design">
+<meta property="article:tag" content="Real-time 3d">
+<meta property="article:tag" content="Tablet">
+<meta property="article:tag" content="Touch-screen">
+<meta property="article:tag" content="Web development">
+<meta property="article:section" content="Front-end development">
+<meta property="article:section" content="Motion design">
+<meta property="article:section" content="Workflow">
+<meta property="article:published_time" content="2014-08-28T14:52:49+00:00">
+<meta property="article:modified_time" content="2014-09-17T10:42:50+00:00">
+<meta property="og:updated_time" content="2014-09-17T10:42:50+00:00">
+<meta property="og:image" content="http://www.turbodrive.tv/blog/wp-content/uploads/2014/08/workflow_part1_capture_sprite.jpg">
+<meta property="og:image" content="http://www.turbodrive.tv/blog/wp-content/uploads/2014/08/workflow_part1c.jpg">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Turbodrive » Feed" href="http://www.turbodrive.tv/blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="Turbodrive » Comments Feed" href="http://www.turbodrive.tv/blog/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Turbodrive » Workflow for CSS 3D Transforms transitions – Part 1 Comments Feed" href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/feed/">
+<link rel="stylesheet" id="wilson_style-css" href="./post01_files/style.css" type="text/css" media="all">
+<link type="text/css" rel="stylesheet" href="css/universal-nav.css">
+<!-- This site uses the Yoast Google Analytics plugin v5.0.5 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript" async="" src="./post01_files/ga.js"></script><script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-36681977-4']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Yoast Google Analytics -->
+<script type="text/javascript" src="./post01_files/jquery.js"></script>
+<script type="text/javascript" src="./post01_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./post01_files/script.js"></script>
+    <script type="text/javascript" src="js/universal-nav.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.turbodrive.tv/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.turbodrive.tv/blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.0">
+<link rel="shortlink" href="http://www.turbodrive.tv/blog/?p=34">
+      
+	      <!--Customizer CSS--> 
+	      
+	      <style type="text/css">
+	           .blog-menu a:hover { color:#d15f5f; }	           .featured-media .sticky-post { background-color:#d15f5f; }	           .post-title a:hover { color:#d15f5f; }	           .post-meta a:hover { color:#d15f5f; }	          
+	           .blog .format-quote blockquote cite a:hover { color:#d15f5f; }	           .content .button:hover { background-color:#d15f5f; }	           .post-cat-tags a { color:#d15f5f; }	           .post-cat-tags a:hover { color:#d15f5f; }	           
+	           .logged-in-as a { color:#d15f5f; }	           .logged-in-as a:hover { color:#d15f5f; }	           .content #respond input[type="submit"]:hover { background-color:#d15f5f; }	           .comment-meta-content cite a:hover { color:#d15f5f; }	           .comment-meta-content p a:hover { color:#d15f5f; }	           .comment-actions a:hover { color:#d15f5f; }	           #cancel-comment-reply-link { color:#d15f5f; }	           #cancel-comment-reply-link:hover { color:#d15f5f; }	           .comment-nav-below a:hover { color:#d15f5f; }	          <!--
+                <php self::generate_css('.archive-nav a:hover', 'background-color', 'accent_color'); ?>
+              <php self::generate_css('.widget-title a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget-title a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_text a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_text a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_rss a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_rss a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_archive a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_archive a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_links a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_links a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_recent_comments a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_recent_comments a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_recent_entries a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_recent_entries a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_categories a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_categories a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_meta a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_meta a:hover', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_recent_comments a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_pages a', 'color', 'accent_color'); ?>
+	           <php self::generate_css('.widget_pages a:hover', 'color', 'accent_color'); ?> -->
+	           #wp-calendar a { color:#d15f5f; }	           #wp-calendar a:hover { color:#d15f5f; }	           #wp-calendar tfoot a:hover { color:#d15f5f; }	           .dribbble-shot:hover { background:#d15f5f; }	           .widgetmore a { color:#d15f5f; }	           .widgetmore a:hover { color:#d15f5f; }	           .flickr_badge_image a:hover img { background:#d15f5f; }	           .credits a:hover { color:#d15f5f; }	      </style> 
+	      
+	      <!--/Customizer CSS-->
+	      
+      	
+	</head>
+	
+	<body class="single single-post postid-34 single-format-standard">
+        <!----- UNINAV ----->
+        
+        <div id="nav" class="nav blog" role="navigation">
+        <div class="brand"><img src="images/nav/logo_shades.png"><div class="red-line"></div></div>
+        <div class="menu">
+            <div class="main">
+                <ul>
+                    <li>
+                        <div class="menu-button">
+                            <a href="#">Showreel</a>
+                        </div>
+                        <div class="over-details">Save your time by watching this video.<br/>Oldies but goodies!</div>
+                    </li>
+                    <li>
+                        <div class="menu-button">
+                            <a href="#">Projects</a>
+                        </div>
+                        <div class="over-details">Wider selection of works.</div>
+                    </li>
+                    <li>
+                        <div class="menu-button">
+                            <a href="#">About me</a>
+                        </div>
+                        <div class="over-details">Skills and experience.</div>
+                    </li>
+                    <li>
+                        <div class="menu-button"><a href="#" id="blog-dropdown">Blog<span class="caret"></span></a>
+                        </div>
+                        <div class="over-details">News, tips and experiments.</div>
+                        <ul class="sub-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">CSS 3D transitions workflow using After Effects</a></li>
+                            <li><a href="#">About the blog</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="menu-button"><a href="#">Contact</a>
+                        </div>
+                        <div class="over-details">Drop me a line, I don't bite.</div></li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div id="info-button" class="info"><a href="#" class="icon"></a></div>
+        <div id="close-button" class="close"><a href="#" class="icon"></a></div>
+        
+        <div class="background"><div class="background-image"></div></div>
+        <div class="navbar"><div id="brand-icon"></div><div id="open-button" class="open-menu"><a href="#" class="icon"></a></div></div>
+    </div>
+        
+        <!----- END UNINAV ----->
+        
+		<div class="wrapper">
+	       
+			<div class="sidebar">
+							
+				<div class="blog-header">
+				
+					<h1 class="blog-title">
+						<a href="http://www.turbodrive.tv/blog" title="Turbodrive — Interactive motion design and beyond!" rel="home"><span class="blog-logo"></span><span class="screen-reader-text">Turbodrive</span></a>
+					</h1>
+					
+					<h3 class="blog-description">Interactive motion design and beyond!</h3>
+					
+                    <!-- REMOVED MOBILE MENU -->
+					<!--<div class="nav-toggle toggle">
+							
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						
+						<div class="clear"></div>
+					
+					</div>-->  
+
+				</div> <!-- /blog-header -->
+				
+				<div class="blog-menu">
+			
+					<ul class="navigation">
+					
+						<li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-68"><a href="http://www.turbodrive.tv/blog/">Home</a></li>
+<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="http://www.turbodrive.tv/blog/about/">About</a></li>
+												
+					 </ul>
+					 
+					 <div class="clear"></div>
+					 
+				</div> <!-- /blog-menu -->
+				
+                <!-- REMOVED MOBILE MENU -->
+				<!-- <div class="mobile-menu">
+						 
+					 <ul class="navigation">
+					
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-68"><a href="http://www.turbodrive.tv/blog/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="http://www.turbodrive.tv/blog/about/">About</a></li>
+						
+					 </ul>
+					 
+				</div> --> <!-- /mobile-menu -->
+				
+				
+					<div class="widgets" role="complementary">
+					
+								<div class="widget widget_recent_entries"><div class="widget-content">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://www.turbodrive.tv/blog/workflow-css-3d-transforms-part-2/">Workflow for CSS 3D Transforms transitions – Part 2</a>
+						</li>
+					<li>
+				<a href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/">Workflow for CSS 3D Transforms transitions – Part 1</a>
+						</li>
+					<li>
+				<a href="http://www.turbodrive.tv/blog/introduction/">Let’s start!</a>
+						</li>
+				</ul>
+		</div><div class="clear"></div></div><div class="widget widget_text"><div class="widget-content"><h3 class="widget-title">About Turbodrive</h3>			<div class="textwidget"><p>Turbodrive is the online presence of Silvère Maréchal, Interactive Motion Designer.<br>
+This blog is dedicated to share ideas, tricks, experiments around both web development and motion design. </p>
+<a href="http://www.turbodrive.tv/blog/about/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-widget-&#39;, &#39;http://www.turbodrive.tv/blog/about/&#39;, &#39;Read more...&#39;]);">Read more...</a></div>
+		</div><div class="clear"></div></div><div class="widget widget_categories"><div class="widget-content"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-5"><a href="http://www.turbodrive.tv/blog/category/front-end-development/">Front-end development</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.turbodrive.tv/blog/category/motion-design/">Motion design</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.turbodrive.tv/blog/category/talk-thought/">Talk &amp; thought</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.turbodrive.tv/blog/category/workflow/">Workflow</a>
+</li>
+		</ul>
+</div><div class="clear"></div></div><div class="widget widget_tag_cloud"><div class="widget-content"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://www.turbodrive.tv/blog/tag/adobe-after-effects/" class="tag-link-8" title="2 topics" style="font-size: 22pt;">Adobe After Effects</a>
+<a href="http://www.turbodrive.tv/blog/tag/css-3d-transforms/" class="tag-link-6" title="2 topics" style="font-size: 22pt;">CSS 3D Transforms</a>
+<a href="http://www.turbodrive.tv/blog/tag/html5/" class="tag-link-7" title="1 topic" style="font-size: 8pt;">HTML5</a>
+<a href="http://www.turbodrive.tv/blog/tag/javascript/" class="tag-link-12" title="2 topics" style="font-size: 22pt;">Javascript</a>
+<a href="http://www.turbodrive.tv/blog/tag/motion-design/" class="tag-link-3" title="1 topic" style="font-size: 8pt;">Motion design</a>
+<a href="http://www.turbodrive.tv/blog/tag/real-time-3d/" class="tag-link-9" title="2 topics" style="font-size: 22pt;">Real-time 3d</a>
+<a href="http://www.turbodrive.tv/blog/tag/tablet/" class="tag-link-19" title="2 topics" style="font-size: 22pt;">Tablet</a>
+<a href="http://www.turbodrive.tv/blog/tag/touch-screen/" class="tag-link-20" title="2 topics" style="font-size: 22pt;">Touch-screen</a>
+<a href="http://www.turbodrive.tv/blog/tag/web-development/" class="tag-link-10" title="2 topics" style="font-size: 22pt;">Web development</a></div>
+</div><div class="clear"></div></div>						
+					</div><!-- /widgets -->
+					
+							
+		
+									
+			</div> <!-- /sidebar -->
+<div class="content">
+											        
+		
+		<div class="posts">
+	
+			<div id="post-34" class="post-34 post type-post status-publish format-standard hentry category-front-end-development category-motion-design category-workflow tag-adobe-after-effects tag-css-3d-transforms tag-html5 tag-javascript tag-motion-design tag-real-time-3d tag-tablet tag-touch-screen tag-web-development">
+			
+									
+								
+				<div class="post-inner">
+
+				<div class="post-header">
+					
+				    <h2 class="post-title"><a href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/" rel="bookmark" title="Workflow for CSS 3D Transforms transitions – Part 1">Introducing Cardboard-kit.fr</a></h2>
+				    
+				    <div class="post-meta">
+					
+						<span class="post-date"><a href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/" title="Workflow for CSS 3D Transforms transitions – Part 1">August 28, 2014</a></span>
+						
+						<span class="date-sep"> / </span>
+							
+						<span class="post-author"><a href="http://www.turbodrive.tv/blog/author/trbdrvadmin/" title="Posts by Silvère" rel="author">Silvère</a></span>
+						
+						<span class="date-sep"> / </span>
+						
+						<a href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/#comments" title="Comment on Workflow for CSS 3D Transforms transitions – Part 1">1 Comment</a>						
+																		
+					</div> <!-- /post-meta -->
+				    
+				</div> <!-- /post-header -->
+													                                    	    
+				<div class="post-content">
+                    <p>Long time with no post...</p>
+                    <p>In early October I was working on some camera tracking for experiments around <a href="http://www.seriouslyjs.org" target="_blank">Seriously.js</a> and <a href="http://www.http://threejs.org/" target="_blank">Three.js</a>. My post about that stuff was in progress and then my good friend Rémi offered me to help him for his new project. I was pretty excited and aggreed to contribute on it.</p>
+    
+<h4>A new side project</h4>
+                    <p>So we made <a href="https://cardboard-kit.fr/">Cardboard-Kit</a> in 3 weeks.<a href="https://cardboard-kit.fr/" class="image-inlineblock alignright"></a> Cardboard-Kit is a small company manufacturing and selling DIY VR headsets, based on the <a href="https://cardboard.withgoogle.com" target="_blank">Google Cardboard Project</a>. The product is made in France and for the moment we are only delivering in this country.<br/>
+There are already several ways to get this kind of viewer on the Internet, but either it’s expensive (when you order from the US to France) or it’s made in a pretty cheap quality.<br/>Another point is that we want to contribute to popularized the VR experience and Cardboard is one of the easiest way to reach it. Basically, the VR can’t be made accessible to everyone if it's expensive and/or you have to buy it on an american or chinese website.</p>
+
+<h4>Pieces of work</h4>
+<p>On this project I’m in charge of designing and producing all stuff related to the visual identity (logo, business card, user manual, press-kit...), developping the website, and creating motion graphics. The packaging for the sold in-store viewer is designed by my friend <a href="http://www.hibiscous.com/" target="_blank">Jeanne Delécluse</a>.</p>
+                
+                <h5>Motion design</h5>
+                    
+                <div class="media-focus">
+                        
+                        <p class="legend">Video introduction (v2) for the website</p>
+                    </div>
+                
+                <h5>Art direction</h5>
+<p>Although art direction isn't my job, I'm always enthusiast about working on graphic design. It’s also a good way for improving my main skills.</p>
+                    
+                    <div class="media-focus">
+                        <p class="legend">Brand identity</p>
+                    </div>
+<p>
+In the same way I’ve also done some back-end work. To improve the UX, I wanted to include the cart on the main page, so I dived into <a href="http://www.opencart.com/" target="_blank">OpenCart</a> and coded some PHP lines to make it work.</p><br/>
+
+                    <h5>Front-end development</h5>
+                    <div class="media-focus">
+                        <p class="legend">Desktop Website (Click to expand)</p>
+                    </div>
+                
+                
+                    <p>Based on Bootstrap 3, the one-page-scroll website is naturally responsive.<br/>
+It still in progress but the main job is done. This project is now becoming a side-project. :-)</p>
+                    
+                    <div class="media-focus">
+                        <p class="legend">Mobile Website (Click to expand)</p>
+                    </div>
+                    
+                    <p>Soon, back to WebGL with real-time compositing (amazing <a href="http://www.seriouslyjs.org" target="_blank">Seriously.js</a> !) and probably some VR web apps to loop the loop with Cardboard-kit.</p>
+                    
+
+	<!-- Social Sharing By Danny v1.2.2 - http://wordpress.org/plugins/dvk-social-sharing/ -->
+    <p class="dvk-social-sharing">
+        <span class="ss-ask">Share this post: </span>
+        <a href="http://twitter.com/intent/tweet/?text=Workflow+for+CSS+3D+Transforms+transitions+%26%238211%3B+Part+1&url=http%3A%2F%2Fwww.turbodrive.tv%2Fblog%2Fworkflow-for-css-3d-transforms-part1%2F" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://twitter.com/intent/tweet/?text=Workflow+for+CSS+3D+Transforms+transitions+%26%238211%3B+Part+1&amp;url=http%3A%2F%2Fwww.turbodrive.tv%2Fblog%2Fworkflow-for-css-3d-transforms-part1%2F&#39;, &#39;on Twitter&#39;]);" rel="external nofollow" class="ss-twitter" target="_blank"><span class="ss-icon-twitter"></span><span class="ss-text">on Twitter</span></a> <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http%3A%2F%2Fwww.turbodrive.tv%2Fblog%2Fworkflow-for-css-3d-transforms-part1%2F&p[title]=Workflow+for+CSS+3D+Transforms+transitions+%26%238211%3B+Part+1" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fwww.turbodrive.tv%2Fblog%2Fworkflow-for-css-3d-transforms-part1%2F&amp;p[title]=Workflow+for+CSS+3D+Transforms+transitions+%26%238211%3B+Part+1&#39;, &#39;on Facebook&#39;]);" rel="external nofollow" class="ss-facebook" target="_blank"><span class="ss-icon-facebook"></span><span class="ss-text">on Facebook</span></a> <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.turbodrive.tv%2Fblog%2Fworkflow-for-css-3d-transforms-part1%2F" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;https://plus.google.com/share?url=http%3A%2F%2Fwww.turbodrive.tv%2Fblog%2Fworkflow-for-css-3d-transforms-part1%2F&#39;, &#39;on Google+&#39;]);" rel="external nofollow" class="ss-googleplus" target="_blank"><span class="ss-icon-googleplus"></span><span class="ss-text">on Google+</span></a>     </p>
+    <!-- / Social Sharing By Danny -->
+   							
+													        
+				</div> <!-- /post-content -->
+				            
+				<div class="clear"></div>
+				
+			</div> <!-- /post-inner -->
+			
+		</div> <!-- /post -->
+		
+	</div> <!-- /posts -->
+								
+	<div class="post-meta-bottom">
+	
+		<div class="post-cat-tags">
+														
+			<p class="post-categories"><span>Categories:</span> <a href="http://www.turbodrive.tv/blog/category/front-end-development/" rel="category tag">Front-end development</a>, <a href="http://www.turbodrive.tv/blog/category/motion-design/" rel="category tag">Motion design</a>, <a href="http://www.turbodrive.tv/blog/category/workflow/" rel="category tag">Workflow</a></p>
+			
+			<p class="post-tags"><span>Tags:</span> <a href="http://www.turbodrive.tv/blog/tag/adobe-after-effects/" rel="tag">Adobe After Effects</a>, <a href="http://www.turbodrive.tv/blog/tag/css-3d-transforms/" rel="tag">CSS 3D Transforms</a>, <a href="http://www.turbodrive.tv/blog/tag/html5/" rel="tag">HTML5</a>, <a href="http://www.turbodrive.tv/blog/tag/javascript/" rel="tag">Javascript</a>, <a href="http://www.turbodrive.tv/blog/tag/motion-design/" rel="tag">Motion design</a>, <a href="http://www.turbodrive.tv/blog/tag/real-time-3d/" rel="tag">Real-time 3d</a>, <a href="http://www.turbodrive.tv/blog/tag/tablet/" rel="tag">Tablet</a>, <a href="http://www.turbodrive.tv/blog/tag/touch-screen/" rel="tag">Touch-screen</a>, <a href="http://www.turbodrive.tv/blog/tag/web-development/" rel="tag">Web development</a></p>		
+		</div> <!-- /post-cat-tags -->
+										
+		<div class="archive-nav post-nav">
+									
+						
+				<a class="post-nav-older" title="Previous post: Let’s start!" href="http://www.turbodrive.tv/blog/introduction/">
+				
+				« Let’s start!				
+				</a>
+		
+						
+							
+				<a class="post-nav-newer" title="Next post: Workflow for CSS 3D Transforms transitions – Part 2" href="http://www.turbodrive.tv/blog/workflow-css-3d-transforms-part-2/">
+				
+				Workflow for CSS 3D Transforms transitions – Part 2 »
+				
+				</a>
+		
+													
+			<div class="clear"></div>
+		
+		</div> <!-- /post-nav -->
+							
+	</div> <!-- /post-meta-bottom -->
+	
+	
+		
+		<div class="comments">
+				
+			<h2 class="comments-title">
+			
+				0 Comments				
+			</h2>
+	
+			<ol class="commentlist">
+			    			</ol>
+			
+						
+				<div class="pingbacks">
+				
+					<div class="pingbacks-inner">
+				
+						<h3 class="pingbacks-title">
+						
+							1 Pingback						
+						</h3>
+					
+						<ol class="pingbacklist">
+						    	
+	<li class="pingback even thread-even depth-1" id="comment-2">
+	
+		 <a href="http://www.turbodrive.tv/blog/workflow-css-3d-transforms-transitions-part-2/" rel="external nofollow" class="url">Workflow for CSS 3D Transforms transitions - Part 2 - Turbodrive</a> 		
+	</li>
+	<!-- #comment-## -->
+						</ol>
+						
+					</div>
+					
+				</div>
+			
+							
+						
+		</div><!-- /comments -->
+		
+		
+		
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.turbodrive.tv/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published.</p>							<p class="comment-form-author"><input id="author" name="author" type="text" placeholder="Name" value="" size="30"><label for="author">Author</label> <span class="required">*</span></p>
+<p class="comment-form-email"><input id="email" name="email" type="text" placeholder="Email" value="" size="30"><label for="email">Email</label> <span class="required">*</span></p>
+<p class="comment-form-url"><input id="url" name="url" type="text" placeholder="Website" value="" size="30"><label for="url">Website</label></p>
+												<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="6" required=""></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="34" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+											</form>
+							</div><!-- #respond -->
+			 
+				
+	   
+
+		<div class="footer section large-padding bg-dark">
+		
+						
+				<div class="column column-1 left">
+				
+					<div class="widgets">
+				
+						<div id="search" class="widget widget_search">
+						
+							<div class="widget-content">
+							
+								<h3 class="widget-title">Search form</h3>
+				                <form method="get" class="searchform" action="http://www.turbodrive.tv/blog/" id="searchform">
+	<input type="search" value="" placeholder="Search form" name="s" id="s"> 
+	<a href="javascript:{}" onclick="document.getElementById(&#39;searchform&#39;).submit(); return false;" title="Search" class="searchsubmit">Submit</a>
+</form>				                
+							</div>
+							
+		                </div>
+										
+					</div>
+					
+				</div>
+				
+			 <!-- /footer-a -->
+				
+						
+				<div class="column column-2 left">
+				
+					<div class="widgets">
+					
+						<div class="widget widget_recent_entries">
+						
+							<div class="widget-content">
+							
+								<h3 class="widget-title">Latest posts</h3>
+								
+								<ul>
+					                <li><a href="http://www.turbodrive.tv/blog/?p=120" title="Workflow for CSS 3D Transforms transitions – Part 3">Workflow for CSS 3D Transforms transitions – Part 3</a> </li> <li><a href="http://www.turbodrive.tv/blog/workflow-css-3d-transforms-part-2/" title="Workflow for CSS 3D Transforms transitions - Part 2">Workflow for CSS 3D Transforms transitions - Part 2</a> </li> <li><a href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/" title="Workflow for CSS 3D Transforms transitions - Part 1">Workflow for CSS 3D Transforms transitions - Part 1</a> </li> <li><a href="http://www.turbodrive.tv/blog/introduction/" title="Let&#39;s start!">Let's start!</a> </li> 								</ul>
+				                
+							</div>
+							
+		                </div>
+										
+					</div> <!-- /widgets -->
+					
+				</div>
+				
+			 <!-- /footer-b -->
+			
+			<div class="clear"></div>
+		
+		</div> <!-- /footer -->
+		
+		<div class="credits">
+		
+			<div class="credits-inner">
+			
+				<p class="credits-left">
+				
+					© 2014 <a href="http://www.turbodrive.tv/blog" title="Turbodrive">Turbodrive</a>
+				
+				</p>
+				
+				<p class="credits-right">
+					
+					<span>Custom theme based on Wilson by <a href="http://www.andersnoren.se/">Anders Noren</a></span> — <a title="To the top" class="tothetop">Up ↑</a>
+					
+				</p>
+				
+				<div class="clear"></div>
+			
+			</div> <!-- /credits-inner -->
+			
+		</div> <!-- /credits -->
+	
+	</div> <!-- /content -->
+	
+	<div class="clear"></div>
+	
+</div> <!-- /wrapper -->
+
+<script type="text/javascript" src="./post01_files/global.js"></script>
+<script type="text/javascript" src="./post01_files/comment-reply.min.js"></script><iframe src="about:blank" style="height: 0px; width: 0px; visibility: hidden; border: none;">This frame prevents back/forward cache problems in Safari.</iframe>
+
+
+<div id="window-resizer-tooltip"><a href="http://www.turbodrive.tv/blog/workflow-for-css-3d-transforms-part1/#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>
